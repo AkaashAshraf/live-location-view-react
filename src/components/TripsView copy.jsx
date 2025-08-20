@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, Polyline, Marker, Popup, useMap } from "react-
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-const API_BASE = "http://10.34.165.130:3000";
+const API_BASE = "http://13.50.252.217:3000";
 
 // Custom icons
 const createIcon = (color) => new L.Icon({
