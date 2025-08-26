@@ -1,15 +1,18 @@
-import { useState } from "react";
-import TripsView from "./components/TripsView";
-// import UsersMapView from "./components/LiveUsersMapView";
-import RealtimeUsersMap from "./components/LiveUsersMapView";
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen";
+import LiveDriversScreen from "./screens/LiveDriversScreen";
+import DriverTripScreen from "./screens/DriverTripScreen";
 
-function App() {
+export default function App() {
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Trips Dashboard</h1>
-      <TripsView />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/live-drivers" element={<LiveDriversScreen />} />
+        <Route path="/driver-trip" element={<DriverTripScreen />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
